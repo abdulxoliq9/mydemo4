@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mydemo4/Pages/home_page.dart';
+import 'package:mydemo4/Pages/use_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -8,7 +9,6 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
       home: HomePage(),
       routes: {
         HomePage.id : (context)=> HomePage(),
+        UsePage.id : (context)=> UsePage(inName: "Flutter",inNum: 22)
       },
 
     );
